@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/maruzsz/maruzsz/_apis/build/status/zoltanzz.pipelines-java?branchName=master)](https://dev.azure.com/maruzsz/maruzsz/_build/latest?definitionId=1&branchName=master)
 
 # Contributing
 
