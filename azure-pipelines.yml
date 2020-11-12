@@ -17,7 +17,7 @@ steps:
       java -version
       export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
       export JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64
-      PATH: $(JAVA_HOME_8_X64)/bin:$(PATH)
+      export PATH:$(JAVA_HOME_8_X64)/bin:$(PATH)
   displayName: "Set java version"
 - task: Maven@3
   inputs:
