@@ -11,14 +11,16 @@ pool:
 
 
 steps:
-- task: CmdLine@2
+
+- task: JavaToolInstaller@0
   inputs:
-    script: |
-      java -version
-      export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-      export JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64
-      export PATH:$(JAVA_HOME_8_X64)/bin:$(PATH)
-  displayName: "Set java version"
+    versionSpec: '8'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'LocalDirectory'
+    jdkFile: '/home/azureuser/java_binaries/jdk-8u271-linux-x64.tar.gz'
+    jdkDestinationDirectory: '/home/azureuser/java_binaries/extract/'
+    cleanDestinationDirectory: true
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
